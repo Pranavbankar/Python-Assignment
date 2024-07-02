@@ -11,7 +11,7 @@ services:
       KEYCLOAK_SERVER_URL: http://localhost:8080/
       KEYCLOAK_REALM: flask-app
       KEYCLOAK_CLIENT_ID: todo-app
-      KEYCLOAK_CLIENT_SECRET: 1NTRNSl36MsB2RGk45CmsvhqrTKHdrn3 
+      KEYCLOAK_CLIENT_SECRET: P2PUOfncxEnNhdqMLIuo99UPYZsridlT 
     networks:
       - backend
 

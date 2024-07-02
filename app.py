@@ -22,7 +22,7 @@ keycloak_openid = keycloak_openid.KeycloakOpenID(
     server_url="http://localhost:8080/",
     client_id="flask-app",
     realm_name="todo-app",
-    client_secret_key="1NTRNSl36MsB2RGk45CmsvhqrTKHdrn3",  # Replace with your client secret
+    client_secret_key= "P2PUOfncxEnNhdqMLIuo99UPYZsridlT",   #use your client_secret_key
     verify=True
 )
 def validate_token(token):
@@ -61,10 +61,10 @@ def callback():
     session['userinfo'] = keycloak_openid.userinfo(token['access_token'])
     return redirect(url_for('dashboard'))
 
-# @app.route('/logout')
-# def logout():
-#     session.clear()
-#     return redirect(url_for('index'))
+@app.route('/register-callback')
+def register_callback():
+    return redirect(url_for('index'))
+
 
 
  
